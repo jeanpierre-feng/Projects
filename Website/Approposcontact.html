@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="CSS/StyleAcc.css">
+        <link rel="stylesheet" href="CSS/styleContact.css">
+        <script src="JavaScripte/JSCConnex.js"></script>
+    </head>
+<body onload="conexdisco()">
+
+    <img src="imgDest/Logo.jpg" alt='LOGO' class="LOGO">
+    <ul class="barre" >
+      <li><a class="active" href="acceuil.html">Acceuil</a></li>
+      <li class="menu">
+        <a class="menuinsc"><span id="utilisateur">Inscription/Identification</span></a>
+        <div class="iddinsc"> 
+          <button onclick="document.getElementById('id01').style.display='block'" style="width:190px;"id="iden">Identification</button><br>
+          <button onclick="document.getElementById('id02').style.display='block'" style="width:190px;"id="insc">Inscription</button><br>
+          <button onclick="deconnex()" style="width:190px;" id="deco" >Deconnexion</button>
+        </div>
+      </li>
+      <li class="right"><a href="Approposcontact.html">A propos & Contact</a>
+      </li>
+    </ul>
+    <H1 style="text-align:center" >Feel Free to contact us if you faced any problems </H1>
+    <br>
+    <H2 style="text-align:center">Nous contacter par voie postale:</H2>
+    <address style="text-align:center"> 
+        3 Avenue Albert Eistein <br>
+        Residence universitaire Jussieu <br>
+        69100<br>
+        Villeurbanne
+    </address>
+    <H2 style="text-align:center">Contactez nous par mail:</H2>
+    <button onclick="window.location.href='mailto:Lorde.obito@gmail.com?subject=Demande%20de%20Renseignements&body=Bonjour,%20je%20souhaiterais%20obtenir%20des%20renseignements%20sur'" class="button" style="vertical-align:middle"><span> @ </span></button>
+
+
+    <H2 style="text-align:center">Ou contactez nous directement par téléphone:</H2>
+
+    <button onclick="window.location.href='tel:0762150307'" class="button" style="vertical-align:middle" ><span> Appelez! </span></button>
+    <div id="id01" class="modal">
+  
+      <form class="modal-content animate">
+        <div class="container">
+          <label for="unmail"><b>Mail</b></label>
+          <input type="email" placeholder="Entrez votre Mail" id="mailconex" required>
+    
+          <label for="psw"><b>Mot de passe</b></label>
+          <input type="password" placeholder="Mot de passe" id="pswconex" required>
+            
+          <button type="button" onclick="getinfo1()">Login</button>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <div id="id02" class="modal">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <form class="modal-content" >
+        <div class="container">
+          <h1>Inscription</h1>
+          <p>Remplissez le fromulaire afin de créer un compte :D.</p>
+          <hr>
+          <label for="Nom"><b>Nom</b></label>
+          <input type="text" placeholder="Votre Nom" id="nominsc" required>
+
+          <label for="prenom"><b>Prenom</b></label>
+          <input type="text" placeholder="Votre Prenom" id="prenominsc" required>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="email" placeholder="Enter Email" id="mailinsc" required>
+    
+          <label for="psw"><b>Mots de passe</b></label>
+          <input type="password" placeholder="Enter mot de passe" id="pswinsc" required>
+    
+          <label for="psw-repeat"><b>confirmer votre mot de passe</b></label>
+          <input type="password" placeholder="confirmer vote mdp" id="pswrepeat" required>
+
+          <div class="clearfix">
+            <button type="button" class="signupbtn" onclick="getinfo2()">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+</body>
+<footer>
+  <div style="background-image:url(imgdest/background_1.jpg);" >
+    <a href="#" style="color: azure;">FAQ</a> <br>
+    <a href="#"style="color: azure;">Informations sur les voyages</a><br>
+    <a href="#"style="color: azure;">Centre d'aide</a><br>
+    <a href="#"style="color: azure;">Conditions générales</a><br>
+    <a href="#"style="color: azure;">Politique de confidentialité et cookies</a> 
+  </div>    
+</footer>
+</html>

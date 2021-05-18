@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="CSS/StyleAcc.css">
+        <script src='JavaScripte/JSCAcc.js'></script>
+        <script src="JavaScripte/JSCConnex.js"></script>
+    </head>
+<body onload="conexdisco()">
+    <img src="imgDest/Logo.jpg" alt='LOGO' class="LOGO">
+    <ul class="barre" onchange="filtre()">
+      <li><a class="active" href="acceuil.html">Acceuil</a></li>
+      <li class="menu">
+        <a class="menuinsc"><span id="utilisateur">Inscription/Identification</span></a>
+        <div class="iddinsc"> 
+          <button onclick="document.getElementById('id01').style.display='block'" style="width:190px;" id="iden">Identification</button><br>
+          <button onclick="document.getElementById('id02').style.display='block'" style="width:190px;" id="insc">Inscription</button><br>
+          <button onclick="deconnex()" style="width:190px;" id="deco" >Deconnexion</button>
+        </div>
+      </li>
+      <li><input type="number" min="0"  id="min" placeholder="Prix Min..." ></li>
+      <li><input type="number" min="0"  id="max" placeholder="Prix Max..." ></li>
+      <li><a>Animaux domestique</a></li>
+      <li><label class="switch">
+        <input type="checkbox" id="animaux">
+        <span class="slider round"></span>
+      </label>
+    </li>
+      <li class="right"><a href="Approposcontact.html"><span id="test" >A propos & Contact</span></a>
+      </li>
+    </ul>
+    <div id="id01" class="modal">
+  
+      <form class="modal-content animate">
+        <div class="container">
+          <label for="unmail"><b>Mail</b></label>
+          <input type="email" placeholder="Entrez votre Mail" id="mailconex" required>
+    
+          <label for="psw"><b>Mot de passe</b></label>
+          <input type="password" placeholder="Mot de passe" id="pswconex" required>
+            
+          <button type="button" onclick="getinfo1()">Login</button>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="id02" class="modal">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <form class="modal-content" >
+        <div class="container">
+          <h1>Inscription</h1>
+          <p>Remplissez le fromulaire afin de créer un compte :D.</p>
+          <hr>
+          <label for="Nom"><b>Nom</b></label>
+          <input type="text" placeholder="Votre Nom" id="nominsc" required>
+
+          <label for="prenom"><b>Prenom</b></label>
+          <input type="text" placeholder="Votre Prenom" id="prenominsc" required>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="email" placeholder="Enter Email" id="mailinsc" required>
+    
+          <label for="psw"><b>Mots de passe</b></label>
+          <input type="password" placeholder="Enter mot de passe" id="pswinsc" required>
+    
+          <label for="psw-repeat"><b>confirmer votre mot de passe</b></label>
+          <input type="password" placeholder="confirmer vote mdp" id="pswrepeat" required>
+
+          <div class="clearfix">
+            <button type="button" class="signupbtn" onclick="getinfo2()">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+
+
+    <h2 style="text-align:center">Liste des destinations</h2>
+    <div class="dest"  id='boston'>
+        <div class="Destination" >
+          <a target="_blank" href="reservation.html?id=boston">
+            <img src="imgDest/Boston.jpg" alt="Boston" width="600" height="400"  >
+          </a>
+          <div class="desc">Reservez votre sejour a Boston la capitale et la plus grande ville de la region de Nouvelle-Angleterre appartir de 50 euros/nuit
+          </div>
+        </div>
+    </div>
+      
+      
+      <div class="dest" id='dubai'>
+        <div class="Destination">
+          <a target="_blank" href="reservation.html?id=dubai">
+            <img src="imgDest/Dubai.jpg" alt="Dubai" width="600" height="400">
+          </a>
+          <div class="desc">Reservez votre sejour a Dubai dans le premier hotel proclame 7 etoiles "Borje AL ARAB"appartir de 350 euros/nuits</div>
+        </div>
+      </div>
+      
+      <div class="dest" id='marrakesh'>
+        <div class="Destination">
+          <a target="_blank" href="reservation.html?id=marrakesh">
+            <img src="imgDest/marrakech.jpg" alt="marrakech" width="600" height="400">
+          </a>
+          <div class="desc">Reservez votre sejour a Marrakech la ville des fetes qui ne dort pas appartir de 40 euros/nuit</div>
+        </div>
+      </div>
+      
+      <div class="dest" id='vegas'>
+        <div class="Destination">
+          <a target="_blank" href="reservation.html?id=vegas">
+            <img src="imgDest/Vegas.jpg" alt="Vegas" width="600" height="400">
+          </a>
+          <div class="desc">Reservez votre sejour a Vegas la ville du peche des casino des nuits nonstop appartir de 100euros/nuits</div>
+        </div>
+      </div>
+      
+      <div class="clearfix"></div>
+
+
+      
+</body>
+<footer>
+  <div style="background-image:url(imgdest/background_1.jpg);" >
+    <a href="#" style="color: azure;">FAQ</a> <br>
+    <a href="#"style="color: azure;">Informations sur les voyages</a><br>
+    <a href="#"style="color: azure;">Centre d'aide</a><br>
+    <a href="#"style="color: azure;">Conditions générales</a><br>
+    <a href="#"style="color: azure;">Politique de confidentialité et cookies</a> 
+  </div>    
+</footer>
+</html>

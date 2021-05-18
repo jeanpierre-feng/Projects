@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="CSS/StyleRecap.css">
+        <script src="JavaScripte/JSCRecap.js"></script>
+
+    </head>
+    <body>
+        <h1 style="text-align: center;">Votre reservation chez " Voyages Infinity" a été bien enregistrée avec succée</h1>
+        <h2 style="text-align: center;">Voici votre récap à imprimer et garder avec vous le long de votre séjour </h2>
+        <div id="id03" class="modal">
+            <div class="modal-content animate" style="text-align: center;">
+            <h1>Recapitulatif du séjour</h1>
+            <p>M/Mlle:<B><span class="info" id="NOM" > </span> <span class="info" id="PRE"></span></B> a reserver chez "Voyages Infinity" un séjour à :<b> <span class="info" id="DST"></span></p></b><br>
+            <p>Date d'arrivée : <b><span class="info" id="DA"></span></b></p><br>
+            <p>Date de départ : <b><span class="info" id="DR"> </span></b></p><br>
+            <p>Nombre d'adultes: <b> <span class="info" id="NAD"></span></b></p><br>
+            <p>Nombre d'enfant :<b><span class="info" id="NEN"> </span></b></p><br>
+            <p><b></b><span class="info" id="DEJ" ></span></b></p><br>
+            <p>Prix total du séjour est bien :<b><span class="info" id="PRIX"> </span>$</b></p><br>
+            <h1>Code de reservation :<br></h1>
+            <img src="imgDest/Code_barres.png" >
+            <h1><b><span class="info" id="cc"> </span></b></h1><br>
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="window.location.href='acceuil.html'" class="cancelbtn">Retour vers l'acceuil</button>
+              </div>
+
+            </div>
+
+
+        </div>
+            <button onclick="recuperation()" >Voir votre recap</button>
+
+
+    </body>
+    
+
+</html>
+
